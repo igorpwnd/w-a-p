@@ -1,9 +1,10 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import './style.css';
 
-function NeedForSpeed() {
+import marea from '../../marea.png';
+
+function NeedForSpeed({ setShowPresentation }: any) {
 
   const [animation, setAnimation] = useState<Animation>();
   const [lapsFinished, setLapsFinished] = useState<number>(0);
@@ -47,7 +48,7 @@ function NeedForSpeed() {
   return (
     <div className="App">
       <div className="">
-        <img id="car" src="marea.png" />
+        <img id="car" src={marea} />
         <img id="road" src="https://img.favpng.com/13/7/23/road-asphalt-png-favpng-1NyacQEjRn6aYfyXGhpJzRHNK.jpg" width="100vw" />
         <div className="commands">
           <h5>Voltas completas {lapsFinished}</h5>
@@ -64,7 +65,7 @@ function NeedForSpeed() {
             <button onClick={() => changeGear(-1)}>R</button>
           </div>
           <div>
-            <Link to="./">Voltar para a apresentação</Link>{' - '}
+            <span onClick={() => { setShowPresentation(true) }}>Voltar para a apresentação</span>{' - '}
             <a href="https://drafts.csswg.org/web-animations-1/">W3C DRAFT</a>{' - '}
             <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API">Tutorial Mozilla!</a>
           </div>

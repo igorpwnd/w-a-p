@@ -8,6 +8,7 @@
 
 #road {
     width: 100vw;
+    max-height: 411px;
 }
 
 #car {
@@ -50,6 +51,12 @@
     padding: 10px;
     border-radius: 11px;
     border: 1px solid black;
+    background-color: black;
+    color: white;
+}
+
+.commands>:last-child span {
+    cursor: pointer;
     background-color: black;
     color: white;
 }
