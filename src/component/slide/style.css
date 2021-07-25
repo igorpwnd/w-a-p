@@ -1,0 +1,7 @@
+.slide {
+    position: absolute;
+    width: 100%;
+    top: 0vh;
+    height: 100vh;
+    opacity: 1;
+}
